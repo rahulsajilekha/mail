@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<style>
+	.ca {
+		padding-top: 100px;
+	}
+	</style>
  </head>
 <body>
  
@@ -43,7 +48,7 @@ if(isset($_POST['signIn']))
 }
 ?>
 <form method="post" action="">
-<div id=login>
+<div id=login class=ca>
 
   <input type="text" id="id" name="id" placeholder="USERNAME"></br>
   

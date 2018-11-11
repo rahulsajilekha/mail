@@ -51,13 +51,15 @@ body {
     float: left;
     width: 65%;
     padding: 10px;
-    height: 100%; 
+    height: 100%;
+   
 }
 .column1 {
     float: left;
     width: 35%;
-    padding: 10px;
-    height: 100%; 
+    padding-left: 80px;
+    height: 100%;
+   
 }
 .row:after {
     content: "";
@@ -81,7 +83,7 @@ body {
   <a href="index.php?chk=registraion">NEW USER</a>
   <a href="index.php?chk=contact">CONTACT US</a>
   <a href="index.php?chk=admin">ADMIN</a>
-</div>
+</div >
 
    <div class="row" align="center">
    <div class="column" style="background-color:#ffffff;">
