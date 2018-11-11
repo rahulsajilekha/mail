@@ -73,9 +73,7 @@ body {
 </head>
 
 <body>
-	<div class="header">
-  <h1>Header</h1>
-</div>
+	
 
 <div class="topnav">
   <a href="index.php">HOME</a>
@@ -134,7 +132,7 @@ body {
 	?>	
 	</div>
    <div class="column1" style="background-color:#bbb;">
-	<marquee direction="up" behavior="scroll" height="400" onmouseover="stop()" onmouseout="start()">
+	<marquee direction="up" behavior="scroll" height="700" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
 	?>

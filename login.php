@@ -19,10 +19,10 @@
     background-color: #b3ffe6;
     }
 .pa {
-	background-color: #f2f2f2;
-	 padding: 30px;
-	 width: 300px;
-	 box-shadow: 5px 5px 25px grey;
+	background-color: #ffffff;
+	 padding: 70px;
+	 width: 600px;
+	 box-shadow: 10px 10px 65px grey;
 }    
 	</style>
  </head>
