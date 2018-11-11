@@ -5,6 +5,19 @@
 	.ca {
 		padding-top: 100px;
 	}
+	.fa {
+    background-color:  #b3b3ff;
+    border: none;
+    color: white;
+    padding: 5px 7px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+.fa:hover {
+    background-color: #b3ffe6;
+    }
 	</style>
  </head>
 <body>
@@ -54,8 +67,8 @@ if(isset($_POST['signIn']))
   
   <input type="text" id="pwd" name="pwd" placeholder="PASSWORD">
   
-  	<button type="submit" value="SignIn" name="signIn">Login</button>
-    <a href="index.php?chk=registraion"><button type="button" class="btn btn-warning">SignUp</button></a>
+  	<button class="fa" type="submit" value="SignIn" name="signIn">Login</button>
+    <a href="index.php?chk=registraion"><button class="fa" type="button" class="btn btn-warning">SignUp</button></a>
  </div>  
 </form>
 </body>
