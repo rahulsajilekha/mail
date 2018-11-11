@@ -8,32 +8,74 @@ error_reporting(1);
 <link rel="stylesheet" href="style.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>My mail server</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; 
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
 		
 </head>
 
 <body>
-<?php include('ads/header.php');?>
-<table width="1430"   align="center" >
-  <tr >
-    <td height="250"  width="1430" colspan="2" >
-	
-	<img src="" height="" width="" />
-	
-		</td>
-  </tr>
-  <tr >
-    <td height="100"  width="1430"   valign="top"  colspan="3" style="background-image: url(newimage/s3.png);">
-    <ul>
-		<li><a href="index.php"> <img src="newimage/home.gif" height="60px" width="200px" /> </a> </li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-	<li>	<a href="index.php?chk=about"> <img src="newimage/ab.gif" height="60px" width="200px" /> </a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-		<li><a href="index.php?chk=registraion"> <img  src="newimage/new.gif" height="60px" width="200px" />  </a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-		
-		<li><a href="index.php?chk=contact"> <img  src="newimage/cont.gif" height="60px" width="200px" />  </a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li><li><a href="index.php?chk=admin"> <img   src="newimage/adminbtn.gif" height="60px" width="200px" />  </a></li></ul>	</td>
-  </tr>
-  <tr>
-    
+	<div class="header">
+  <h1>Header</h1>
+</div>
+
+<div class="topnav">
+  <a href="index.php">HOME</a>
+  <a href="index.php?chk=about">ABOUT US</a>
+  <a href="index.php?chk=registraion">NEW USER</a>
+  <a href="index.php?chk=contact">CONTACT US</a>
+  <a href="index.php?chk=admin">ADMIN</a>
+</div>
+<div>
 	
 	<?php
 
@@ -81,15 +123,13 @@ error_reporting(1);
     }
 	?>	
 	
-    <td width="330" align="center">
+   
 	<marquee direction="up" behavior="scroll" height="400" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
 	?>
 	</marquee>
-	</td>
-  </tr>
-</table>
-<?php include('ads/header.php');?>
+	
+</div>
 </body>
 </html>

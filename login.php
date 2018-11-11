@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
- <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+ </head>
 <body>
  
  <?php
@@ -51,21 +44,13 @@ if(isset($_POST['signIn']))
 ?>
 <form method="post" action="">
 <div id=login>
-<div class="container" >
-<div class="well well-sm">	
-    <div class="form-group">
-      <label for="id" class="bmd-label-floating">Username:</label>
-      <input type="text" class="form-control" id="id" name="id">
-    </div>
-    <div class="form-group">
-      <label for="pwd" class="bmd-label-floating">Password:</label>
-      <input type="password" class="form-control" id="pwd" name="pwd">
-    </div>
+<label for="id">First Name</label>
+  <input type="text" id="id" name="id"></br>
+  <label for="pwd">Last Name</label>
+  <input type="text" id="pwd" name="pwd">
   
-  	<button type="submit" class="btn btn-success" value="SignIn" name="signIn">Login</button>
+  	<button type="submit" value="SignIn" name="signIn">Login</button>
     <a href="index.php?chk=registraion"><button type="button" class="btn btn-warning">SignUp</button></a>
-    </div>
-    </div>
-  </div>
+ </div>  
 </form>
 </body>
