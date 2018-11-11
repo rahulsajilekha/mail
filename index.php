@@ -75,8 +75,9 @@ body {
   <a href="index.php?chk=contact">CONTACT US</a>
   <a href="index.php?chk=admin">ADMIN</a>
 </div>
-<div>
-	
+
+   <div class="row">
+   <div class="column" style="background-color:#aaa;">
 	<?php
 
 	@$chk=$_REQUEST['chk'];
@@ -122,14 +123,14 @@ body {
     echo"</td>"; 
     }
 	?>	
-	
-   
+	</div>
+   <div class="column" style="background-color:#bbb;">
 	<marquee direction="up" behavior="scroll" height="400" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
 	?>
 	</marquee>
-	
+	</div>
 </div>
 </body>
 </html>
