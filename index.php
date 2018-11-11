@@ -49,14 +49,21 @@ body {
 }
 .column {
     float: left;
-    width: 33.33%;
+    width: 65%;
     padding: 10px;
-    height: 300px; 
+    height: 100%; 
+}
+.column1 {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 100%; 
 }
 .row:after {
     content: "";
     display: table;
     clear: both;
+    padding: 10px
 }
 
 </style>
@@ -76,8 +83,8 @@ body {
   <a href="index.php?chk=admin">ADMIN</a>
 </div>
 
-   <div class="row">
-   <div class="column" style="background-color:#aaa;">
+   <div class="row" align="center">
+   <div class="column" style="background-color:#ffffff;">
 	<?php
 
 	@$chk=$_REQUEST['chk'];
@@ -124,7 +131,7 @@ body {
     }
 	?>	
 	</div>
-   <div class="column" style="background-color:#bbb;">
+   <div class="column1" style="background-color:#bbb;">
 	<marquee direction="up" behavior="scroll" height="400" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');

@@ -44,10 +44,10 @@ if(isset($_POST['signIn']))
 ?>
 <form method="post" action="">
 <div id=login>
-<label for="id">First Name</label>
-  <input type="text" id="id" name="id"></br>
-  <label for="pwd">Last Name</label>
-  <input type="text" id="pwd" name="pwd">
+
+  <input type="text" id="id" name="id" placeholder="USERNAME"></br>
+  
+  <input type="text" id="pwd" name="pwd" placeholder="PASSWORD">
   
   	<button type="submit" value="SignIn" name="signIn">Login</button>
     <a href="index.php?chk=registraion"><button type="button" class="btn btn-warning">SignUp</button></a>
