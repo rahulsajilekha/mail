@@ -18,6 +18,12 @@
 .fa:hover {
     background-color: #b3ffe6;
     }
+.pa {
+	background-color: #f2f2f2;
+	 padding: 30px;
+	 width: 300px;
+	 box-shadow: 5px 5px 25px grey;
+}    
 	</style>
  </head>
 <body>
@@ -62,6 +68,7 @@ if(isset($_POST['signIn']))
 ?>
 <form method="post" action="">
 <div id=login class=ca>
+<div class=pa>	
 
   <input type="text" id="id" name="id" placeholder="USERNAME"></br>
   
@@ -69,6 +76,7 @@ if(isset($_POST['signIn']))
   
   	<button class="fa" type="submit" value="SignIn" name="signIn">Login</button>
     <a href="index.php?chk=registraion"><button class="fa" type="button" class="btn btn-warning">SignUp</button></a>
+</div>
  </div>  
 </form>
 </body>
