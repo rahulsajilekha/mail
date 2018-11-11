@@ -16,7 +16,7 @@ th, td {
   </tr>
   <tr>
     <td width="121" height="37">Name</td>
-    <td width="252">Sanjeev Kumar </td>
+    <td width="252">JONNY DEPP </td>
   </tr>
   <tr>
     <td height="36">Mobile </td>
@@ -28,7 +28,7 @@ th, td {
   </tr>
     <tr>
     <td>Email</td>
-    <td>phptpoint@gmail.com</td>
+    <td>JONNY@gmail.com</td>
   </tr>
    <tr>
     <td>Website</td>
