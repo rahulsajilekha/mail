@@ -1,4 +1,15 @@
+<html><head><style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style></head><body>
 <table width="90%" border="1" align="center">
   <tr style="background:#CCCCCC" height="30px">
     <th colspan="2" style="color:#0000FF">Contact Us</th>
@@ -25,3 +36,4 @@
   </tr>
   
 </table>
+</body></html>
