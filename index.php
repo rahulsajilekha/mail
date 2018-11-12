@@ -56,18 +56,26 @@ body {
     float: left;
     width: 75%;
     padding: 10px;
-    height: 700px;
+    height: 100%;
+
    
 }
 .column1 {
     float: left;
     width: 25%;
-    padding-left: 50px;
-    height: 100%;
+    padding-left: 10px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    
+   
+}
+.column3{
+  height: 600px;
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
     background-blend-mode: multiply,multiply;
     box-shadow: 2px 2px 8px grey;
-   
+    border-radius: 10px;
+
 }
 .row:after {
     content: "";
@@ -75,7 +83,6 @@ body {
     clear: both;
     padding: 10px
 }
-
 </style>
 		
 </head>
@@ -91,8 +98,8 @@ body {
   <a href="index.php?chk=admin">ADMIN</a>
 </div >
 
-   <div class="row" align="center">
-   <div class="column" style="background-image: linear-gradient(to bottom right, #cfd9df, #e2ebf0);">
+   <div class="row" align="center" style="background-image: linear-gradient(to bottom right, #cfd9df, #e2ebf0);">
+   <div class="column" >
 	<?php
 
 	@$chk=$_REQUEST['chk'];
@@ -140,11 +147,13 @@ body {
 	?>	
 	</div>
    <div class="column1">
-	<marquee direction="up" behavior="scroll" height="700" onmouseover="stop()" onmouseout="start()">
+    <div class="column3">
+	<marquee direction="up" behavior="scroll" height="600px" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
 	?>
 	</marquee>
+</div>
 	</div>
 </div>
 </body>

@@ -3,30 +3,33 @@
 <head>
 	<style>
 	.ca {
-		padding-top: 20px;
+		padding: 20px;
+		height: 100%;
 	}
 	.fa {
     background-color:  #b3b3ff;
     border: none;
     color: white;
-    padding: 5px 7px;
+    padding: 8px 12px;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 20px;
     }
 
 .fa:hover {
     background-color: #b3ffe6;
+    padding: 12px 16px; 
     }
 .pa {
 	background-color: #ffffff;
-	 padding: 70px;
-	 width: 1100px;
-	 height: 500px;
+	 padding: 200px;
+	 height: 100%;
 	 box-shadow: 0px 2px 4px grey;
 	 border-radius: 10px;
-	vertical-align: center;
-	
+
+	 
+
 
 }    
 	</style>
