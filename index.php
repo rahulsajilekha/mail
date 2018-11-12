@@ -30,7 +30,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
-    height: 100px;
+    height: 80px;
     border: 25px;
 }
 
@@ -54,15 +54,15 @@ body {
 }
 .column {
     float: left;
-    width: 65%;
+    width: 75%;
     padding: 10px;
     height: 100%;
    
 }
 .column1 {
     float: left;
-    width: 35%;
-    padding-left: 80px;
+    width: 25%;
+    padding-left: 50px;
     height: 100%;
    
 }
@@ -136,7 +136,7 @@ body {
     }
 	?>	
 	</div>
-   <div class="column1" style="background-color:#bbb;">
+   <div class="column1">
 	<marquee direction="up" behavior="scroll" height="700" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
