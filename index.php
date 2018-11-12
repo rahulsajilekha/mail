@@ -40,7 +40,7 @@ body {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-family: verdana;
     font-style: bold;
     padding: 30px 30px;
