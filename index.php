@@ -56,7 +56,7 @@ body {
     float: left;
     width: 75%;
     padding: 10px;
-    height: 100%;
+    height: 700px;
    
 }
 .column1 {
@@ -64,6 +64,9 @@ body {
     width: 25%;
     padding-left: 50px;
     height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
+    box-shadow: 2px 2px 8px grey;
    
 }
 .row:after {
@@ -89,7 +92,7 @@ body {
 </div >
 
    <div class="row" align="center">
-   <div class="column" style="background-color:#ffffff;">
+   <div class="column" style="background-image: linear-gradient(to bottom right, #cfd9df, #e2ebf0);">
 	<?php
 
 	@$chk=$_REQUEST['chk'];

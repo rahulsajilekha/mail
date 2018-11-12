@@ -3,7 +3,7 @@
 <head>
 	<style>
 	.ca {
-		padding-top: 100px;
+		padding-top: 20px;
 	}
 	.fa {
     background-color:  #b3b3ff;
@@ -21,8 +21,13 @@
 .pa {
 	background-color: #ffffff;
 	 padding: 70px;
-	 width: 600px;
-	 box-shadow: 10px 10px 65px grey;
+	 width: 1100px;
+	 height: 500px;
+	 box-shadow: 0px 2px 4px grey;
+	 border-radius: 10px;
+	vertical-align: center;
+	
+
 }    
 	</style>
  </head>
