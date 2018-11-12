@@ -38,7 +38,7 @@ body {
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color:  #f2f2f2;
     text-align: center;
     font-size: 20px;
     font-family: verdana;
@@ -149,7 +149,7 @@ body {
 	</div>
    <div class="column1">
     <div class="column3">
-	<marquee padding="10px" direction="up" behavior="scroll" height="600px" onmouseover="stop()" onmouseout="start()">
+	<marquee padding="10px" direction="up" behavior="scroll" height="550px" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
 	?>

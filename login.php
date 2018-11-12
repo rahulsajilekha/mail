@@ -9,23 +9,27 @@
 		height: 100%;
 	}
 	.fa {
-    background-color:  #b3b3ff;
+    background-color:#669999  ;
     border: none;
     color: white;
-    padding: 8px 12px;
+    height: 50px;
+    width: 110px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: verdana;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 30px;
     }
 
 .fa:hover {
-    background-color: #b3ffe6;
-    padding: 12px 16px; 
+    background-color:  #b3b3ff;
+    
     }
 .pa {
-	background-color: #ffffff;
-	 padding: 200px;
+	background-image: url('22.jpg');
+	
+
+	 padding: 130px;
 	 height: 100%;
 	 box-shadow: 0px 2px 4px grey;
 	 border-radius: 10px;
@@ -78,11 +82,10 @@ if(isset($_POST['signIn']))
 ?>
 <form method="post" action="">
 <div id=login class=ca>
-<div class=pa>	
-  <i class="fa fa-user-circle" ></i>
-  <input type="text" id="id" name="id" placeholder="USERNAME">
-  <i class="fa fa-key" aria-hidden="true"></i>
-  <input type="password" id="pwd" name="pwd" placeholder="PASSWORD">
+<div class=pa >	
+	<img src="user.png" alt="Girl in a jacket" style="width:150px;height:150px;"> 
+  <input type="text" id="id" name="id" placeholder="USERNAME"/>
+  <input type="password" id="pwd" name="pwd" placeholder="PASSWORD"/></br>
   
   	<button class="fa" type="submit" value="SignIn" name="signIn">Login</button>
     <a href="index.php?chk=registraion"><button class="fa" type="button" class="btn btn-warning">SignUp</button></a>
