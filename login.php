@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
+	
 	.ca {
 		padding: 20px;
 		height: 100%;
@@ -77,11 +79,10 @@ if(isset($_POST['signIn']))
 <form method="post" action="">
 <div id=login class=ca>
 <div class=pa>	
-
-  <input type="text" id="id" name="id" placeholder="USERNAME" background-image: url('user.png') 
-    background-position: 10px 10px ;><br>
-  
-  <input type="text" id="pwd" name="pwd" placeholder="PASSWORD">
+  <i class="fa fa-user-circle" ></i>
+  <input type="text" id="id" name="id" placeholder="USERNAME"><br>
+  <i class="fa fa-key" aria-hidden="true"></i>
+  <input type="password" id="pwd" name="pwd" placeholder="PASSWORD">
   
   	<button class="fa" type="submit" value="SignIn" name="signIn">Login</button>
     <a href="index.php?chk=registraion"><button class="fa" type="button" class="btn btn-warning">SignUp</button></a>
