@@ -78,7 +78,8 @@ if(isset($_POST['signIn']))
 <div id=login class=ca>
 <div class=pa>	
 
-  <input type="text" id="id" name="id" placeholder="USERNAME"></br>
+  <input type="text" id="id" name="id" placeholder="USERNAME" background-image: url('user.png') 
+    background-position: 10px 10px ;><br>
   
   <input type="text" id="pwd" name="pwd" placeholder="PASSWORD">
   

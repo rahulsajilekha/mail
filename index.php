@@ -71,10 +71,11 @@ body {
 }
 .column3{
   height: 600px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
-    background-blend-mode: multiply,multiply;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%); 
     box-shadow: 2px 2px 8px grey;
     border-radius: 10px;
+    padding: 20px;
+
 
 }
 .row:after {
@@ -148,7 +149,7 @@ body {
 	</div>
    <div class="column1">
     <div class="column3">
-	<marquee direction="up" behavior="scroll" height="600px" onmouseover="stop()" onmouseout="start()">
+	<marquee padding="10px" direction="up" behavior="scroll" height="600px" onmouseover="stop()" onmouseout="start()">
 	<?php
 	include_once('latestupdDisp.php');
 	?>
