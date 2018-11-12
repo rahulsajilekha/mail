@@ -1,5 +1,37 @@
 
-<h2 style="background:#99FF33;padding:5px" align="left">About us</h2>
+<html>
+<head>
+	<style>
+	h2 
+	{
+		border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    
+    font-family: verdana;
+    font-size: 42px;
+    }
+    .about
+    {
+    	padding-top: 5px;
+    	background-color: white;
+        height: 650px;
+        border-radius: 10px;
+       background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+	}
+	p
+	{
+		color: white;
+		font-family: verdana;
+		text-shadow: 2px 1px black;
+	}
+    </style>
+</head>
+<body>
+		
+	<div class="about">
+
+	<h2>About iMAIL</h2>
 <p>About Phptpoint.Com
 Phptpoint’s free PHP Online Tutorial has heaps of PHP Interview question and well-run Interview question with answer associated to core php, cake php, codeigniter, mysql, joomla etc. which can assist you to crack the Interview for PHP developer.</p>
 
@@ -13,3 +45,6 @@ There is always distrust in the wits of the beginners that a site can’t help the
 <p>
 Apart from free online tutorial Phptpoint provides you free downloading facility also. Students can easily download free php projects. There are huge numbers of projects available for your reference. You can select them to see as an example and start learning through those live examples, because examples are the best ways for describing a particular thing. You can pick any topic from the online php tutorial and we will guide you with a complete package from the definition to the explanation in a well versed manner. 
 </p>
+</div>
+</body>
+</html>
