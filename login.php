@@ -80,7 +80,7 @@ if(isset($_POST['signIn']))
 <div id=login class=ca>
 <div class=pa>	
   <i class="fa fa-user-circle" ></i>
-  <input type="text" id="id" name="id" placeholder="USERNAME"><br>
+  <input type="text" id="id" name="id" placeholder="USERNAME">
   <i class="fa fa-key" aria-hidden="true"></i>
   <input type="password" id="pwd" name="pwd" placeholder="PASSWORD">
   
