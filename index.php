@@ -30,6 +30,8 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
+    height: 100px;
+    border: 25px;
 }
 
 /* Style the topnav links */
@@ -38,7 +40,10 @@ body {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    font-size: 30px;
+    font-family: verdana;
+    font-style: bold;
+    padding: 30px 30px;
     text-decoration: none;
 }
 

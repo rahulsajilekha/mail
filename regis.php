@@ -40,7 +40,7 @@ if($_POST['reg'])
 
 ?>
 <form method="post" enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF']; ?>">
-<table width="90%" border="1" align="center">
+<table width="90%" border="0" align="center">
   <font color="#FF0000"><?php echo $err; ?></font>
   <tr>
     <td width="204" height="47">Enter Your User Name </td>
