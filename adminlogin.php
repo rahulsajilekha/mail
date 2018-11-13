@@ -26,12 +26,11 @@
     
     }
 .pa {
-	background-image: url('22.jpg');
-	
+	background-color: #333;
+   box-shadow: 0px 2px 4px grey;
 
 	 padding: 130px;
 	 height: 100%;
-	 box-shadow: 0px 2px 4px grey;
 	 border-radius: 10px;
 
 	 
@@ -40,9 +39,11 @@
 } 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 350px;
   perspective: 1000px;
+  border-radius: 25px;
+
 }
 
 .flip-card-inner {
@@ -52,7 +53,6 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -67,17 +67,28 @@
 }
 
 .flip-card-front {
-  background-color: #bbb;
+  background-color: transparent;
   color: black;
   z-index: 2;
 }  
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
+background-color: #333;
+   transform: rotateY(180deg);
   z-index: 1;
+  border-radius: 25px;
+
 } 
+p{
+  font-family: verdana;
+  color: white;
+  font-size: 20px;
+
+}
+input{
+  color: white;
+
+}
 	</style>
  </head>
 
@@ -126,24 +137,24 @@ if(isset($_POST['signIn']))
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="user.png" alt="Avatar" style="width:300px;height:300px;">
+      <img src="admin2.png" alt="Avatar" style="width:350px;height:350px;">
     </div>
     <div class="flip-card-back">
 <form method="post" action="">
-
-    Admin Username
+<center>
+  <p>  Admin Username</p>
   
 		<input type="text" name="id" />
   
  
-  Admin Password
+ <p> Admin Password</p>
   
   
-  <input type="password" name="pwd" width="500"/><br/>
+  <input type="password" name="pwd"  /><br/>
 
 	   <button class="fa" type="submit" value="SignIn" name="signIn">Login</button>
 
-	
+	</center>
 </form>
 </div>
 </div>
