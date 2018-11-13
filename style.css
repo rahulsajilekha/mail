@@ -46,12 +46,12 @@
 			height:80%;
 			border:1px solid green;
 			float:left;
-			margin-left:0.5%;
+			margin-left:0.5%
 			padding-top:1%;
 			color:red;
 			}*/
 		input[type=reset],input[type=submit]{
-			padding: 100px;
+			padding: 10px;
 		}
 		input[type=text],input[type=password],input[type=number],input[type=email]
 			{ 

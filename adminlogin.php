@@ -1,12 +1,28 @@
  <html>
 <head>
-<link rel="stylesheet" href="style2.css" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.fa {
+    background-color:#669999  ;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 110px;
+    text-align: center;
+    font-size: 20px;
+    font-family: verdana;
+    cursor: pointer;
+    border-radius: 30px;
+    }
+
+.fa:hover {
+    background-color:  #b3b3ff;
+    
+    }
 
 .flip-card {
   background-color: transparent;
@@ -32,7 +48,7 @@ body {
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height:100%;
   backface-visibility: hidden;
 }
 
@@ -86,41 +102,23 @@ if(isset($_POST['signIn']))
     </div>
     <div class="flip-card-back">
 <form method="post" action="">
-<table width="40%"    align="center"  style="font-family:Verdana"  >
-<div id=login>
 
-  	<tr height="30"><td width="10"></td>
-		<td > <font color="#FF0000"> <?php echo @$err; ?></font></td>
-	</tr>
-
-  <tr><td width="10"></td><td style="font-size:20px">
     Admin Username
-  </td></tr>
-  <tr><td width="10"></td><td>
   
 		<input type="text" name="id" />
-  </td></tr><tr height="10"></tr>
-   <tr><td width="10"></td><td style="font-size:20px"> 
+  
  
   Admin Password
-  </td></tr>
-  <tr><td width="10"></td><td>
+  
   
   <input type="password" name="pwd" width="500"/><br/>
-  </td></tr><tr height="10"><td></td><td></td></tr>
-  <tr><td width="10"></td><td>	
-    
-	<input type="submit"  width="80" height="40" value="SignIn" name="signIn" />
+
+	   <button class="fa" type="submit" value="SignIn" name="signIn">Login</button>
+
 	
-	</td>
-  </tr>
-  <tr height="15"></tr>
-  </div>
-</table>
 </form>
  </div>
   </div>
 </div>
-
 </body>
 </html>
