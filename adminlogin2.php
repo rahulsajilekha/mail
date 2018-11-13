@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+ <html>
 <head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
-	
-	.ca {
-		padding: 35px;
-		height: 100%;
-	}
-	.fa {
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ca {
+    padding: 20px;
+    height: 100%;
+  }
+.fa {
     background-color:#669999  ;
     border: none;
     color: white;
@@ -25,19 +27,7 @@
     background-color:  #b3b3ff;
     
     }
-.pa {
-	background-image: url('22.jpg');
-	
 
-	 padding: 130px;
-	 height: 100%;
-	 box-shadow: 0px 2px 4px grey;
-	 border-radius: 10px;
-
-	 
-
-
-} 
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -70,18 +60,32 @@
   background-color: #bbb;
   color: black;
   z-index: 2;
-}  
+}
+.pa
+{
+
+  background-image: url('22.jpg');
+  
+
+   padding: 130px;
+   height: 100%;
+   box-shadow: 0px 2px 4px grey;
+   border-radius: 10px;
+
+   
+
+
+}    
 
 .flip-card-back {
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
   z-index: 1;
-} 
-	</style>
- </head>
-
-<?php
+}
+</style>
+</head>
+ <?php
 error_reporting(1);
 include_once('connection.php');
 if(isset($_POST['signIn']))
@@ -109,20 +113,10 @@ if(isset($_POST['signIn']))
 	}
 }
 ?>
-
-
-
-
-
-
 <body>
- 
- 
-<form method="post" action="">
-<div id=login class=ca>
-<div class=pa >	
+  <div id=login class=ca>
 
-
+  <div class="pa">
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -148,13 +142,7 @@ if(isset($_POST['signIn']))
 </div>
 </div>
  </div>
-	
-
-
-
-
-
+  </div>
 </div>
- </div>  
-</form>
 </body>
+</html>
