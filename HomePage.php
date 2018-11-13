@@ -100,6 +100,7 @@ include('ads/header.php');?>
 			{
 			include_once("newedit.php");
 			}
+			
 			if($chk=="compose")
 			{
 			include_once('compose.php');
@@ -141,20 +142,19 @@ include('ads/header.php');?>
 		
 		<!--inbox -->
 		<?php
+		if($chk=="vmsg")
+		{	
 		$id=$_SESSION['sid'];
 		@$coninb=$_GET['coninb'];
 			
 			if($coninb)
 			{
 			$sql="SELECT * FROM usermail where rec_id='$id' and mail_id='$coninb'";
-$dd=mysql_query($sql);
-			$row=mysql_fetch_object($dd);
-			echo "Subject :".$row->sub."<br/>";
-			echo "Message :".$row->msg;
-			$att=$row->attachement;
-			if($att!="")
-			echo "<a href='upload//$att'>download attachement</a>";
+            $dd=mysql_query($sql);
+            echo "1234567890";
+			include_once('viewmessage.php');
 			}
+		}	
 			
 			
 	@$cheklist=$_REQUEST['ch'];

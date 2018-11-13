@@ -30,7 +30,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
-    height: 80px;
+    height: 60px;
     border: 25px;
 }
 
@@ -43,7 +43,7 @@ body {
     font-size: 20px;
     font-family: verdana;
     font-style: bold;
-    padding: 30px 30px;
+    padding: 20px;
     text-decoration: none;
 }
 

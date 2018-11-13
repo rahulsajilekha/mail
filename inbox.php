@@ -20,7 +20,7 @@ while(list($mid,$rid,$sid,$s,$m,$a,$d)=mysql_fetch_array($dd))
 	echo "<tr height='50' colspan='4' style='background-color:rgba(150,150,150,0.5);'>";
 	echo "<td width='100'><input type='checkbox' name='ch[]' value='$mid'/></td>";
 	echo "<td>".$sid."</td>";
-	echo "<td><a href='HomePage.php?coninb=$mid'>".$s."</a></td>";
+	echo "<td><a href='Homepage.php?coninb=$mid&chk=vmsg'>".$s."</a></td>";
 	echo "<td>".$d."</td>";
 	echo "</tr>";	
 	}
