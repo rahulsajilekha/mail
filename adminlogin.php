@@ -57,6 +57,21 @@ body {
   color: black;
   z-index: 2;
 }
+.flip
+{
+
+  background-image: url('22.jpg');
+  
+
+   padding: 130px;
+   height: 100%;
+   box-shadow: 0px 2px 4px grey;
+   border-radius: 10px;
+
+   
+
+
+}    
 
 .flip-card-back {
   background-color: #2980b9;
@@ -95,6 +110,7 @@ if(isset($_POST['signIn']))
 }
 ?>
 <body>
+  <div class="flip">
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -117,6 +133,7 @@ if(isset($_POST['signIn']))
 
 	
 </form>
+</div>
  </div>
   </div>
 </div>
