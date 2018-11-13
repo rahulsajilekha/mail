@@ -137,7 +137,7 @@ if(isset($_POST['signIn']))
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="admin2.png" alt="Avatar" style="width:350px;height:350px;">
+      <img src="user.png" alt="Avatar" style="width:350px;height:350px;">
     </div>
     <div class="flip-card-back">
 <form method="post" action="">

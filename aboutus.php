@@ -2,6 +2,10 @@
 <html>
 <head>
 	<style>
+	.ca {
+		padding: 20px;
+		height: 100%;
+	}
 	h2 
 	{
 		border-radius: 10px;
@@ -14,10 +18,12 @@
     .about
     {
     	padding-top: 5px;
-    	background-color: white;
+    	 background-color: #333;
+    	opacity: .5;
         height: 650px;
         border-radius: 10px;
-       background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+        box-shadow: 2px 2px 8px grey; 
+       
 	}
 	p
 	{
@@ -28,6 +34,9 @@
     </style>
 </head>
 <body>
+
+<div id=login class=ca>
+
 		
 	<div class="about">
 
@@ -45,6 +54,7 @@ There is always distrust in the wits of the beginners that a site can’t help the
 <p>
 Apart from free online tutorial Phptpoint provides you free downloading facility also. Students can easily download free php projects. There are huge numbers of projects available for your reference. You can select them to see as an example and start learning through those live examples, because examples are the best ways for describing a particular thing. You can pick any topic from the online php tutorial and we will guide you with a complete package from the definition to the explanation in a well versed manner. 
 </p>
+</div>
 </div>
 </body>
 </html>

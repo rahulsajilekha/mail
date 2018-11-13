@@ -83,7 +83,7 @@ if(isset($_POST['signIn']))
 <form method="post" action="">
 <div id=login class=ca>
 <div class=pa >	
-	<img src="user.png" alt="Girl in a jacket" style="width:150px;height:150px;"> 
+	<img src="admin2.png" alt="Girl in a jacket" style="width:150px;height:150px;"> </br>
   <input type="text" id="id" name="id" placeholder="USERNAME"/>
   <input type="password" id="pwd" name="pwd" placeholder="PASSWORD"/></br>
   
