@@ -1,55 +1,5 @@
- <html>
-<head>
 <link rel="stylesheet" href="style2.css" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-  z-index: 2;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-  z-index: 1;
-}
-</style>
-</head>
+ 
  <?php
 error_reporting(1);
 include_once('connection.php');
@@ -78,13 +28,6 @@ if(isset($_POST['signIn']))
 	}
 }
 ?>
-<body>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="user.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
 <form method="post" action="">
 <table width="40%"    align="center"  style="font-family:Verdana"  >
 <div id=login>
@@ -110,7 +53,7 @@ if(isset($_POST['signIn']))
   </td></tr><tr height="10"><td></td><td></td></tr>
   <tr><td width="10"></td><td>	
     
-	<input type="submit"  width="80" height="40" value="SignIn" name="signIn" />
+	<input type="submit" style="background-src: 'newimage/abcd.png'" width="80" height="40" value="SignIn" name="signIn" />
 	
 	</td>
   </tr>
@@ -118,9 +61,3 @@ if(isset($_POST['signIn']))
   </div>
 </table>
 </form>
- </div>
-  </div>
-</div>
-
-</body>
-</html>
