@@ -1,0 +1,7 @@
+$str = "My secret String";
+
+$converter = new Encryption;
+$encoded = $converter->encode($str );
+$decoded = $converter->decode($encoded);    
+
+echo "$encoded<p>$decoded";

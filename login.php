@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php include_once('library/enAde.php'); ?>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 	
@@ -55,9 +57,15 @@ if(isset($_POST['signIn']))
 	{
 	$d=mysql_query("SELECT * FROM userinfo where user_name='{$_POST['id']}'");
 	$row=mysql_fetch_object($d);
-		$fid=$row->user_name;
-		$fpass=$row->password;
-		$fstatus=$row->cstatus;
+	
+
+	$converter = new Encryption;
+	$fpass = $converter->decode($row->password);
+
+
+	$fid=$row->user_name;
+		//$fpass=$row->password;
+	$fstatus=$row->cstatus;
 		if($fstatus==1)
 		{
 		if($fid==$_POST['id'] && $fpass==$_POST['pwd'])

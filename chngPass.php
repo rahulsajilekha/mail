@@ -1,5 +1,6 @@
 <?php
 include_once('connection.php');
+include_once('library/enAde.php');
 error_reporting(1);
 $id=$_SESSION['sid'];
 $op=$_POST['op'];
@@ -20,6 +21,9 @@ if(isset($_POST['chngP']))
 		{
 			if($np==$cp)
 			{
+
+				$converter = new Encryption;
+                $np = $converter->encode($np);
 			$sql="update userinfo set password='$np' where user_name='$id'";
 		$d=mysql_query($sql);
 		echo "pass updated...";
