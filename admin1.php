@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
+<link rel="stylesheet" href="style5.css" />
 </head>
 
 <body>
-<table height="60"></table>
-<table  width="1430">
+<div class="container1">	
 
 <?php include("connection.php");
 error_reporting(0);
@@ -41,15 +41,16 @@ $sql="select * from userinfo where vstatus=0";
 $r=mysql_query($sql);
 while($n=mysql_fetch_array($r))
 {
- echo"<tr align='top' font_family='verdana' >       
-                  <td>$n[0]</td>
+ echo"<table><tr align='top';>       
+                  <td width='100'>$n[0]</td>
 				  <td>$n[1]</td>
-				  <td><a href='admin1.php?u=1&e=$n[0]'><img src='newimage/21.png' height='30' width='50'>
-				  </tr>";
+				  <td><a href='admin1.php?u=1&e=$n[0]'/><button>Approve</button></a></td>
+				  </tr></table>";
 
 
 }
 }
-?></table>
+?>
+</div>
 </body>
 </html>

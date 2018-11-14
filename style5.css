@@ -1,0 +1,34 @@
+.container1{
+	height: 650px;
+	width: 100%;
+	border: none;
+	padding: 60px;
+	background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+	 border-radius: 15px;
+
+
+}
+table{
+	width: 1200px;
+}
+tr{
+	font-family: verdana;
+	background-color: #333;
+    color: white;
+	
+}
+td{
+	text-align: center;
+	border-radius: 25px;
+	padding: 10px;
+}
+button{
+	background-color: #333;
+    color: white;
+    border: 3px solid #ff0000;
+	border-radius: 20px;
+	height: 35px;
+	width: 90px;
+}
+button:hover{
+    border: 3px solid #4CAF50;}
