@@ -74,7 +74,7 @@ if(isset($_POST['signIn']))
 		{
 		if($fid==$_POST['id'] && $fpass==$_POST['pwd'])
 		{
-		$_SESSION['sid']=$_POST['id'];
+		$_SESSION['sid']=$converter->encode($_POST['id']);
 		//header('location:HomePage.php');
 		echo "<script>window.location='HomePage.php'</script>";
 		}

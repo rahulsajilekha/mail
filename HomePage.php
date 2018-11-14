@@ -1,4 +1,6 @@
 <?php
+include_once('library/enAde.php');
+
 session_start();
 if($_SESSION['sid']=="")
 {
@@ -60,7 +62,9 @@ include('ads/header.php');?>
 	echo "<img alt='image not upload' src='userImages/$id/$file' height='160' width='140' border='3'/>";
 ?></div>
 	
-	 <div style=" font-family:Verdana;float:left;margin-left:300px;padding-top:40px;font-size:70px;text-align:center;color:#333333"> Welcome <?php  echo @$_SESSION['sid'];?>
+	 <div style=" font-family:Verdana;float:left;margin-left:300px;padding-top:40px;font-size:70px;text-align:center;color:#333333"> 
+<?php $converter = new Encryption; ?>
+	 	Welcome <?php  echo $converter->decode($_SESSION['sid']); ?> 
 	 </div>
  	  </td>
   </tr>
