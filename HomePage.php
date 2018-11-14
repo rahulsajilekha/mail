@@ -55,6 +55,7 @@ include('ads/header.php');?>
 	
 	$row=mysql_fetch_object($r);
 	@$file=$row->image;
+	//$id=$row->user_name;
 	//echo $file;
 	echo "<img alt='image not upload' src='userImages/$id/$file' height='160' width='140' border='3'/>";
 ?></div>
