@@ -1,9 +1,6 @@
 <?php
 include_once('connection.php');
-include_once('library/enAde.php');
-
 error_reporting(1);
-
 $y=$_POST['y'];
 $m=$_POST['m'];
 $d=$_POST['d'];
@@ -11,9 +8,7 @@ $dob=$y."-".$m."-".$d;
 $ch=$_POST['ch'];
 //$hobbies=implode(",",$ch);
 $imgpath=$_FILES['file']['name'];
-$converter = new Encryption;           
-$un = $converter->encode($_POST['un']);
-//$un=$_POST['un'];
+$un=$_POST['un'];
 $st1=0;
 $st2=0;
 if($_POST['reg'])
@@ -32,18 +27,7 @@ if($_POST['reg'])
 		}
 		else
 		{
-			//$converter = new Encryption;           
-			 //$un = $converter->encode($_POST['un']);
-
-            $pwd = $converter->encode($_POST['pwd']);
-            $mob = $converter->encode($_POST['mob']);
-            $eid = $converter->encode($_POST['eid']);
-            $gen = $converter->encode($_POST['gen']);
-            $addr = $converter->encode($_POST['addr']);
-            $dob = $converter->encode($dob);
-           // $imgpath = $converter->encode($imgpath);
-
-		mysql_query("INSERT INTO userinfo values('','$un','$pwd','$mob','$eid','$gen','$addr','$dob',
+		mysql_query("INSERT INTO userinfo values('','{$_POST['un']}','{$_POST['pwd']}','{$_POST['mob']}','{$_POST['eid']}','{$_POST['gen']}','{$_POST['addr']}','$dob',
 		'$imgpath',$st1,$st2)");
 		mkdir("userImages/$un");
 		move_uploaded_file($_FILES["file"]["tmp_name"], "userImages/$un/" . $_FILES["file"]["name"]);
@@ -95,7 +79,7 @@ if($_POST['reg'])
 		<select name="y">
 			<option value="">Year</option>
 			<?php
-			for($i=1940;$i<=2018;$i++)
+			for($i=1900;$i<=2018;$i++)
 			{
 			echo "<option value='$i'>$i</option>";
 			}

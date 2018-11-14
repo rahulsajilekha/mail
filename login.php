@@ -55,15 +55,19 @@ if(isset($_POST['signIn']))
 	}
 	else
 	{
-	$d=mysql_query("SELECT * FROM userinfo where user_name='{$_POST['id']}'");
+		$converter = new Encryption;
+		$id = $converter->encode($_POST['id']);
+
+	$d=mysql_query("SELECT * FROM userinfo where user_name='$id'");
 	$row=mysql_fetch_object($d);
 	
 
-	$converter = new Encryption;
+	
 	$fpass = $converter->decode($row->password);
 
+	$fid = $converter->decode($row->user_name);
 
-	$fid=$row->user_name;
+	//$fid=$row->user_name;
 		//$fpass=$row->password;
 	$fstatus=$row->cstatus;
 		if($fstatus==1)
@@ -74,11 +78,14 @@ if(isset($_POST['signIn']))
 		//header('location:HomePage.php');
 		echo "<script>window.location='HomePage.php'</script>";
 		}
-		else
+		elseif ($fid!=$_POST['id'] || $fpass!=$_POST['pwd'])
 		{
-		$err="invalid id or pass";
+			echo "invalid username/password";
+			//$err="invalid id or pass";
+			//cript>alert("Invalid Username/Password");</script>
+		
 		}
-		}
+	}
 		else
 		{
 		  $err="Account not approved";
