@@ -1,39 +1,65 @@
-<html><head><style>
-table {
-    border-collapse: collapse;
-    width: 100%;
+
+<?php session_start();
+error_reporting(1);
+ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<style>
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.title {
+    color: grey;
+    font-size: 18px;
 }
-</style></head><body>
-<table width="90%" border="1" align="center">
-  <tr style="background:#CCCCCC" height="30px">
-    <th colspan="2" style="color:#0000FF">Contact Us</th>
-  </tr>
-  <tr>
-    <td width="121" height="37">Name</td>
-    <td width="252">JONNY DEPP </td>
-  </tr>
-  <tr>
-    <td height="36">Mobile </td>
-    <td> 9015501897 </td>
-  </tr>
-  <tr>
-    <td>Add</td>
-    <td>141 Dhakka Near kingsway camp Delhi 110009 </td>
-  </tr>
-    <tr>
-    <td>Email</td>
-    <td>JONNY@gmail.com</td>
-  </tr>
-   <tr>
-    <td>Website</td>
-    <td><a href="http://www.phptpoint.com">www.phptpoint.com</a></td>
-  </tr>
-  
-</table>
-</body></html>
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+</style>
+		
+</head>
+
+<body>
+	
+
+<div class="card">
+  <img src="img.jpg" alt="John" style="width:100%">
+  <h1>John Doe</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Harvard University</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a> 
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+  <a href="#"><i class="fa fa-facebook"></i></a> 
+  <p><button>Contact</button></p>
+</div>
+
+</body>
+</html>
