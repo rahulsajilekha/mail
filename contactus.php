@@ -43,17 +43,39 @@ button:hover, a:hover {
     opacity: 0.7;
 }
 </style>
-		
+    
 </head>
 
 <body>
-	
+  
 
 <div class="card">
-  <img src="img.jpg" alt="John" style="width:100%">
-  <h1>John Doe</h1>
-  <p class="title">CEO & Founder, Example</p>
+  <img src="sundar.jpg" alt="John" style="width:100%">
+  <h1>Sundar Pichai</h1>
+  <p class="title">CEO & Founder</p>
   <p>Harvard University</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a> 
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+  <a href="#"><i class="fa fa-facebook"></i></a> 
+  <p><button>Contact</button></p>
+</div>
+<div class="card">
+  <img src="markzuc.jpg" alt="Mark" style="width:100%">
+  <h1>Mark Zuck</h1>
+  <p class="title">Manager</p>
+  <p>Oxford University</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a> 
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+  <a href="#"><i class="fa fa-facebook"></i></a> 
+  <p><button>Contact</button></p>
+</div>
+<div class="card">
+  <img src="Stevejo.jpg" alt="Steve" style="width:100%">
+  <h1>Steve Jo</h1>
+  <p class="title">Assistant Manager</p>
+  <p>Kerala University</p>
   <a href="#"><i class="fa fa-dribbble"></i></a> 
   <a href="#"><i class="fa fa-twitter"></i></a> 
   <a href="#"><i class="fa fa-linkedin"></i></a> 
