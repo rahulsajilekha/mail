@@ -11,9 +11,19 @@ include_once('connection.php');
 @$to=$_POST['to'];
 @$sub=$_POST['sub'];
 @$msg=$_POST['msg'];
+@$cc=$_POST['cc'];
+
 @$id='admin';
 $sql="INSERT INTO usermail values('','$to','$id','$sub','$msg','$file',sysdate())";
+$pql="INSERT INTO usermail values('','$cc','$id','$sub','$msg','$file',sysdate())";
+
 $r=mysql_query($sql);
+if ($cc!='') {
+$r=mysql_query($pql);
+
+}
+
+
 ?>
 <form method="post">
 <table height="60"></table>
