@@ -8,8 +8,9 @@ $id=$_SESSION['sid'];
 
 
 $sql="SELECT * FROM usermail where rec_id='$id'";
-$dd=mysql_query($sql);
-
+//$dd=mysql_query($sql);
+$dd=mysql_fetch_object($sql);
+	
 echo "<div style='margin-left:10px;font-family:Verdana;'>";
 
 	echo "<table width='1200'>";
@@ -17,20 +18,35 @@ echo "<div style='margin-left:10px;font-family:Verdana;'>";
 
 	echo "<tr><td><input type='submit' value='Delete' name='delete'/></td></tr>";
 
-while(list($mid,$rid,$sid,$s,$m,$a,$d)=mysql_fetch_array($dd))
-{ 
-	$sid = $converter->decode($sid);
-    $s = $converter->decode($s);
-    $d = $converter->decode($d);
-	echo "<tr height='50' colspan='4' style='background-color:rgba(150,150,150,0.5);'>";
-	echo "<td width='100'><input type='checkbox' name='ch[]' value='$mid'/></td>";
-	echo "<td>".$sid."</td>";
-	echo "<td><a href='Homepage.php?coninb=$mid&chk=vmsg'>".$s."</a></td>";
-	echo "<td>".$d."</td>";
-	echo "</tr>";	
-	}
-	echo "</table>";
-	
+//while(list($mid,$rid,$sid,$s,$m,$a,$d)=mysql_fetch_array($dd))
+//{ 
+	//$sid = $converter->decode($sid);
+   // $s = $converter->decode($s);
+    //$d = $converter->decode($d);
+	//echo "<tr height='50' colspan='4' style='background-color:rgba(150,150,150,0.5);'>";
+	//echo "<td width='100'><input type='checkbox' name='ch[]' value='$mid'/></td>";
+	//echo "<td>".$sid."</td>";
+	//echo "<td><a href='Homepage.php?coninb=$mid&chk=vmsg'>".$s."</a></td>";
+	//echo "<td>".$d."</td>";
+	//echo "</tr>";	
+	//}
+	//echo "</table>";
+
+$fpass = $converter->decode($dd->msg);
+echo $fpass;
+
+	//$sql="select * from usermail where rec_id='$id'";
+//$r=mysql_query($sql);
+while($n=mysql_fetch_array($dd))
+{
+ echo"<tr align='top';>       
+                  <td width='100'>.$n[3].</td>
+				  <td>.$n[4].</td>
+				  <td><a href='admin1.php?u=1&e=.$n[0].'/><button>Approve</button></a></td>
+				  </tr></table>";
+
+
+}
 	
 	
 
