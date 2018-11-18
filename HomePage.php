@@ -154,9 +154,9 @@ include('ads/header.php');?>
 			
 			if($coninb)
 			{
-			$sql="SELECT * FROM usermail where rec_id='$id' and mail_id='$coninb'";
-            $dd=mysql_query($sql);
-            echo "1234567890";
+			//$sql="SELECT * FROM usermail where rec_id='$id' and mail_id='$coninb'";
+            //$dd=mysql_query($sql);
+            //echo "1234567890";
 			include_once('viewmessage.php');
 			}
 		}	

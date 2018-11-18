@@ -6,7 +6,8 @@ $id=$_SESSION['sid'];
 
 $sql="SELECT * FROM draft where user_id='$id'";
 $dd=mysql_query($sql);
-
+$p= count($dd);
+echo $p;
 //echo "<div style='margin-left:10px;width:640px;height:auto;border:2px solid red;'>";
 
 	echo "<table  width='1200' style='background-color:rgba(150,150,150,0.5);'>";

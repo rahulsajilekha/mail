@@ -7,6 +7,7 @@ $converter = new Encryption;
 @$to=$converter->encode($_POST['to']);
 @$sub=$converter->encode($_POST['sub']);
 @$msg=$converter->encode($_POST['msg']);
+@$cc=$converter->encode($_POST['cc']);
 $file=$_FILES['file1']['name'];
 $filename="upload//".$file;
 if($file!="")
@@ -24,21 +25,14 @@ if(@$_REQUEST['send'])
 	
 	else
 	{
-	$d=mysql_query("SELECT * FROM userinfo where user_name='$to'");
-	$row=mysql_num_rows($d);
-	//if($row==1)
-		//{
-		mysql_query("INSERT INTO usermail values('','$to','$id','$sub','$msg','$file',sysdate())");
-		$err= "message sent...";
-		//}
-	//else
-		//{
-		//$sub=$sub."--"."msg failed";
-		//mysql_query("INSERT INTO usermail values('','$id','$id','$sub','$msg','$file',sysdate())");
-		//$err= "message failed...";
+	$sql="INSERT INTO usermail values('','$to','$id','$sub','$msg','$file',sysdate())";
+    $pql="INSERT INTO usermail values('','$cc','$id','$sub','$msg','$file',sysdate())";
 
-		//}	
-	}
+       $r=mysql_query($sql);
+          if ($cc!='') {
+           $r=mysql_query($pql);
+	      }
+	  }
 }	
 
 

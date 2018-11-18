@@ -10,9 +10,11 @@
 
 <?php
 include_once('connection.php');
-
+include_once('library/enAde.php');
+$converter = new Encryption;
 $id='admin';
-
+$id=$converter->encode($_POST[$id]);
+echo $id;
 
 $sql="SELECT * FROM usermail where rec_id='$id'";
 $dd=mysql_query($sql);
