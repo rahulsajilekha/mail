@@ -15,7 +15,7 @@ $converter = new Encryption;
 @$msg=$converter->encode($_POST['msg']);
 @$cc=$converter->encode($_POST['cc']);
 @$id='admin';
-@$id=$converter->encode($_POST[$id]);
+@$id=$converter->encode($id);
 
 if($to=="" || $sub=="" || $msg=="")
   {
