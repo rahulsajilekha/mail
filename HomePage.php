@@ -17,6 +17,13 @@ $id=$_SESSION['sid'];
 	a{text-decoration: none}
 	a:hover{ background-color:#fcff26}
 	#atop{margin-left:50}
+	img{
+		vertical-align: middle;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        }
+
 </style>
 </head>
 
@@ -175,6 +182,9 @@ include('ads/header.php');?>
 			include_once('viewsentmessage.php');
 			}
 		}	
+
+
+
 			
 
 
