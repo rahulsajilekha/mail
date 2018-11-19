@@ -1,17 +1,23 @@
 <?php
 include_once('connection.php');
+include_once('library/enAde.php');
+$converter = new Encryption;
 error_reporting(1);
 $sid=$_SESSION['sid'];
 $mob=$_POST['mob'];
 $mail=$_POST['eid'];
 $addr=$_POST['addr'];
+$mob = $converter->encode($mob);
+$mail = $converter->encode($mail);
+$addr = $converter->encode($addr);
+
 $imgpath=$_FILES['file']['name'];
 if($_POST['reg1'])
 {
 	$r=mysql_query("SELECT * FROM userinfo where user_name='$sid'");
 	$t=mysql_num_rows($r);
      mysql_query("update userinfo set mobile='$mob' where user_name='$sid'");
-     echo "<script>alert('Mobile NO updated')window.location='Homepage.php?chk=vprofile'</script>";
+     echo "<script>alert('Mobile NO updated');window.location='Homepage.php?chk=vprofile'</script>";
 }
 
 if($_POST['reg2'])
@@ -27,7 +33,7 @@ if($_POST['reg3'])
 {
 	$r=mysql_query("SELECT * FROM userinfo where user_name='$sid'");
 	$t=mysql_num_rows($r);
-     mysql_query("update userinfo set hobbies='$addr' where user_name='$sid'");
+     mysql_query("update userinfo set address='$addr' where user_name='$sid'");
      echo "<script>alert('Address updated');window.location='Homepage.php?chk=vprofile'</script>";
 }
 
