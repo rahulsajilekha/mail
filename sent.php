@@ -1,36 +1,38 @@
-<h1  style="font-family:Verdana" align="center">Sent</h1>
 <?php
 include_once('connection.php');
+include_once('library/enAde.php');
+$converter = new Encryption;
 
 $id=$_SESSION['sid'];
 
 
-$sql="SELECT * FROM usermail where sen_id='$id'";
-$dd=mysql_query($sql);
+echo "<div style='margin-left:10px;font-family:Verdana;'>";
+		echo "<form action='deletesentmsg.php' method='post'>";
 
-echo "<div style='margin-left:10px;font-family:'verdana';width:640px;height:auto;border:2px solid red;'>";
+	    echo "<table width='1200'>";
+        echo "<tr><td><input type='submit' value='Delete' name='delete'/></td></tr>";
 
-	echo "<table  width='1200' valign='top'>";
-			echo "<form action='sentdelete.php' method='post'>";
 
-	echo "<tr><td><input type='submit' value='Delete' name='delete'/></td></tr>";
+for ($i=0; $i < 1000; $i++) { 
 
-	
-while(list($mid,$rid,$sid,$s,$m,$a,$d)=mysql_fetch_array($dd))
-{
-	echo "<tr  height='50' style='background-color:rgba(150,150,150,0.5);'>";
-	echo "<form>";
-	echo "<td><input type='checkbox' name='ch[]' value='$mid'/></td>";
-	echo "<td>".$rid."</td>";
-	echo "<td><a href='HomePage.php?consent=$mid'>".$s."</a></td>";
-	echo "<td>".$d."</td>";
-	echo "</tr>";	
+        $sql="select * from usermail where sen_id ='$id' and mail_id=$i";
+		$d=mysql_query($sql);
+		$y="vsmsg";
+		
+
+		list($a,$b,$c,$e,$f,$g,$h)=mysql_fetch_array($d);
+
+		 if ($a!='')
+		 {
+		$b = $converter->decode($b);
+        $e = $converter->decode($e);
+       
+       echo "<tr height='50' colspan='4' style='background-color:rgba(150,150,150,0.5);'>";
+	   echo "<td width='100'><input type='checkbox' name='ch[]' value='$a'/></td>";
+       echo "<td>".$b."</td>";
+	   echo "<td><a href='HomePage.php?coninb=$a&chk=$y'>".$e."</a></td>";
+	   echo "<td>".$h."</td>";
+	   echo "</tr>";
 	}
-	echo "</table>";
-	
-//echo "<input type='submit' value='Delete' name='delete'/>";
-echo "</div>";
-	
-echo "</form>";
-
+	}
 ?>
