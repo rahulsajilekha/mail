@@ -41,8 +41,7 @@ echo "</form>";*/
         echo "<tr><td><input type='submit' value='Delete' name='delete'/></td></tr>";
 
 
-for ($i=1; $i < 1000; $i++) { 
-	
+for ($i=0; $i < 1000; $i++) { 
 
         $sql="select * from usermail where rec_id ='$id' and mail_id=$i";
 		$d=mysql_query($sql);
@@ -50,6 +49,7 @@ for ($i=1; $i < 1000; $i++) {
 		//list($a,$b,$c,$e,$f,$g,$h)=mysql_fetch_array($d);
 		//echo $a;
 		//echo .$b.;
+		//print_r($sql);
 
 		list($a,$b,$c,$e,$f,$g,$h)=mysql_fetch_array($d);
 

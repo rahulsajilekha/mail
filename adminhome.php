@@ -134,6 +134,16 @@ if($chk=="pass")
      include_once('adminpass.php');
     echo"</td>";
   }
+if($chk=="vmsg")
+    { 
+    //$id=$_SESSION['sid'];
+    @$coninb=$_GET['coninb'];
+      
+      if($coninb)
+      {
+      include_once('viewmessageadmin.php');
+      }
+    }
   ?>
 	</div>
    
