@@ -1,11 +1,16 @@
 <?php
 include_once('connection.php');
 include_once('library/enAde.php');
+$converter = new Encryption;
 error_reporting(1);
 $id=$_SESSION['sid'];
 $op=$_POST['op'];
 $np=$_POST['np'];
 $cp=$_POST['cp'];
+$np = $converter->encode($np);
+$op = $converter->encode($op);
+$cp = $converter->encode($cp);
+
 if(isset($_POST['chngP']))
 {
 	if($op=="" || $np=="" || $cp=="")
@@ -22,8 +27,8 @@ if(isset($_POST['chngP']))
 			if($np==$cp)
 			{
 
-				$converter = new Encryption;
-                $np = $converter->encode($np);
+				
+                
 			$sql="update userinfo set password='$np' where user_name='$id'";
 		$d=mysql_query($sql);
 		echo "pass updated...";
@@ -31,11 +36,15 @@ if(isset($_POST['chngP']))
 			
 			else
 			{
+
 			echo "new pass doesn't match to confirm pass";
 			}
 		}
 		else
 		{
+			echo $c;
+			echo "</br>";
+				echo $cp;
 		echo "wrong old password";
 		}
 	}
