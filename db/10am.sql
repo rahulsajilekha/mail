@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2018 at 09:31 AM
+-- Generation Time: Nov 20, 2018 at 07:12 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -52,7 +52,15 @@ CREATE TABLE IF NOT EXISTS `draft` (
   `msg` text NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`draft_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `draft`
+--
+
+INSERT INTO `draft` (`draft_id`, `user_id`, `sub`, `attach`, `msg`, `date`) VALUES
+(7, 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'GmWwTxcTzbdLtijAMK_jvBkjY1Zbql77keHrapV2ANw', 'epapertechnology-170418124405.pdf', '-4rd2is2iH3OuF4xhgb-6tJEaA8LEBtxDEmL8hsELwF6RzShvTSeA-DGOsQNwk3H3eC2w2LDCrIDVxFIKOCq8Q', '2018-11-19'),
+(8, 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'lGzYcJmfLanuygC7Cyks5Bh5zVlPeJWFIx2ZSUT2NCk', 'NP_Complete.pdf', '-gEoP9yIAq5gCTlUBg-bjGNxRGEOw8qmsEhSF9nUdbw', '2018-11-19');
 
 -- --------------------------------------------------------
 
@@ -79,14 +87,15 @@ CREATE TABLE IF NOT EXISTS `latestupd` (
   `image` varchar(200) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`upd_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `latestupd`
 --
 
 INSERT INTO `latestupd` (`upd_id`, `title`, `content`, `image`, `date`) VALUES
-(17, 'dep', 'qwertyuiop', '66zgojk.jpg', '2018-11-12');
+(17, 'dep', 'qwertyuiop', '66zgojk.jpg', '2018-11-12'),
+(18, 'New Appointment', 'Miss Nadiya Rajendran has been appointed as the lead thoopukari of the instiution', 'Mangum.jpg', '2018-11-19');
 
 -- --------------------------------------------------------
 
@@ -115,32 +124,13 @@ CREATE TABLE IF NOT EXISTS `mails` (
 
 CREATE TABLE IF NOT EXISTS `trash` (
   `trash_id` int(11) NOT NULL AUTO_INCREMENT,
-  `rec_id` varchar(50) NOT NULL,
-  `sen_id` varchar(50) NOT NULL,
-  `sub` varchar(50) NOT NULL,
+  `rec_id` varchar(1000) NOT NULL,
+  `sen_id` varchar(1000) NOT NULL,
+  `sub` varchar(1000) NOT NULL,
   `msg` text NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`trash_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
-
---
--- Dumping data for table `trash`
---
-
-INSERT INTO `trash` (`trash_id`, `rec_id`, `sen_id`, `sub`, `msg`, `date`) VALUES
-(29, 'ajayv', 'sunilc', 'fgdfgd', 'fgddfdgfdf', '2018-11-12'),
-(30, 'ajayv', 'sunilc', 'sdgssdfsdsf', 'gdgfdgfdgfgd', '2018-11-12'),
-(31, 'ajayv', 'sunilc', 'sdgffgdsg', 'dgfdgfdfgdg', '2018-11-12'),
-(32, 'ajayv', 'sunilc', 'xcvxcvxvc', 'dfbdcbdvb', '2018-11-12'),
-(33, 'ajayv', 'sunilc', 'dsdvc', 'cvcxvcx', '2018-11-12'),
-(34, 'ajayv', 'sunilc', 'sdsdsds', 'ffdffv', '2018-11-12'),
-(35, 'ajayv', 'sunilc', 'ffgfgd', 'cxvxcxvc', '2018-11-12'),
-(36, 'ajayv', 'sunilc', 'dfdfgdfvfvd', 'dfdfvvdf', '2018-11-12'),
-(37, 'ajayv', 'sunilc', 'csdfvf', 'dsvscvc', '2018-11-12'),
-(38, 'ajayv', 'sunilc', 'sfdsfdsdf', 'sdfsfsfd', '2018-11-12'),
-(39, 'ajayv', 'sunilc', 'sfgsdfg', 'sdfsds', '2018-11-12'),
-(40, 'ajayv', 'sunilc', 'sdf', 'fgee', '2018-11-12'),
-(41, 'sunilc', 'ajayv', 'asasas', 'asasasaas', '2018-11-14');
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -163,17 +153,16 @@ CREATE TABLE IF NOT EXISTS `userinfo` (
   PRIMARY KEY (`user_jd`),
   UNIQUE KEY `user_name` (`user_name`,`mobile`,`email`),
   KEY `gender` (`gender`,`dob`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `userinfo`
 --
 
 INSERT INTO `userinfo` (`user_jd`, `user_name`, `password`, `mobile`, `email`, `gender`, `address`, `dob`, `image`, `cstatus`, `vstatus`) VALUES
-(28, 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'ZwFOssrusqc9G-2O4n2QEibL5HXHGlKBVY7-pwbkOpo', 'z2eciNVEsT_HjNMlGjjx9lQ_2K6-tpFhXPMGeVuEeUQ', 'RrwG--Kai51w2fiGp1K778p45ueEjU5lxVk3b4BDbdc', 'xWq3d-hPrlBl9-BYEP-dKTb2RRSJ7qdAzc7mrEaNEPLO-nN-TbwYeTCgC0aicM87wfeUCJt_0d7gCfTrRWltmQ', 'xCyFtVmJWsvx1RGoHELQds5ZQtl7AG9i_VJO2SX-gSU', '22.jpg', 1, 1),
-(13, 'ajayv', 'ajayv', '1235435265', 'ajayv@gmail.com', 'm', 'vra 17 pallimukkhu', '1912-10-29', '66zgojk.jpg', 1, 1),
-(14, 'sunilc', 'sunilc', '7656456765', 'sunilc@gmail.com', 'm', 'cricket,football', '1933-10-17', '8558659.jpg', 1, 1),
-(27, 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'ZwFOssrusqc9G-2O4n2QEibL5HXHGlKBVY7-pwbkOpo', 'URtEk6tT2HOAC1Mq956HrrBKXMMixtAJE-w_FzIzPl8', 'W13VGi0gc76GpPs6642FXByh2JR7FdVvmNl39Yd2uys', 'xWq3d-hPrlBl9-BYEP-dKTb2RRSJ7qdAzc7mrEaNEPLO-nN-TbwYeTCgC0aicM87wfeUCJt_0d7gCfTrRWltmQ', 'DuVL09Vf5qwAJjFVZTuYNKRVjFRzhf8Y4SBXTT2n_PA', '22.jpg', 1, 1);
+(1, 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'ZwFOssrusqc9G-2O4n2QEibL5HXHGlKBVY7-pwbkOpo', '454fS_he62KQZbCZ_Kr4bSwDe0TKTXyXUXYpUoBGh_Y', 'W13VGi0gc76GpPs6642FXByh2JR7FdVvmNl39Yd2uys', 'rJAhdFNY7xWZUALNjlZEtg67Vwlx2dn0fPIg9H_np6w', 'xCyFtVmJWsvx1RGoHELQds5ZQtl7AG9i_VJO2SX-gSU', 'Mangum.jpg', 1, 1),
+(2, 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'ZwFOssrusqc9G-2O4n2QEibL5HXHGlKBVY7-pwbkOpo', 'z2eciNVEsT_HjNMlGjjx9lQ_2K6-tpFhXPMGeVuEeUQ', 'RrwG--Kai51w2fiGp1K778p45ueEjU5lxVk3b4BDbdc', 'he_I4dRWvmAshLfGxOZ9J1yXyJCBNl1VKlJ5O8hv6JPlWlkCVd4fjij7d_q4_V2v7recN8n9As9MHAqb-w4duA', 'y2MMsb6TIQCBGVpbCjjhrHWd48OaM6vzzGyD8U3YGV4', 'LCA.jpg', 1, 1),
+(3, 'LCmXtIU4pFTgXTQRlgu66SLx0h3dty3eB4TdWiY3A6E', 'LCmXtIU4pFTgXTQRlgu66SLx0h3dty3eB4TdWiY3A6E', 'ZwFOssrusqc9G-2O4n2QEibL5HXHGlKBVY7-pwbkOpo', '2i0cFl73XaG7-Tz52Crz5Iey1K2NsLkFybwjXxt_PGc', 'W13VGi0gc76GpPs6642FXByh2JR7FdVvmNl39Yd2uys', 'he_I4dRWvmAshLfGxOZ9J1yXyJCBNl1VKlJ5O8hv6JPlWlkCVd4fjij7d_q4_V2v7recN8n9As9MHAqb-w4duA', 'ic5XkDU6Z63C0eUXPVqdGYlx64G9EXet3R7ypouyDa0', 'Mangum.jpg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -183,24 +172,24 @@ INSERT INTO `userinfo` (`user_jd`, `user_name`, `password`, `mobile`, `email`, `
 
 CREATE TABLE IF NOT EXISTS `usermail` (
   `mail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `rec_id` varchar(30) NOT NULL,
-  `sen_id` varchar(30) NOT NULL,
-  `sub` char(30) NOT NULL,
-  `msg` text NOT NULL,
+  `rec_id` varchar(3000) NOT NULL,
+  `sen_id` varchar(3000) NOT NULL,
+  `sub` varchar(3000) NOT NULL,
+  `msg` varchar(3000) NOT NULL,
   `attachement` text NOT NULL,
   `recDT` date NOT NULL,
   PRIMARY KEY (`mail_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=145 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `usermail`
 --
 
 INSERT INTO `usermail` (`mail_id`, `rec_id`, `sen_id`, `sub`, `msg`, `attachement`, `recDT`) VALUES
-(141, 'NvPg8w-2yATKP3nL93WSyqJ2XteKYf', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYf', 'test1--msg failed', 'testing in process', '22.jpg', '2018-11-17'),
-(142, 'raja', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYf', 'test2', 'testing in progress', '22.jpg', '2018-11-17'),
-(143, 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGh', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYf', 'ItpCBU2t8Ra8FQOV6iruY5dEvBP4wX', '4dfJbLvB0bMmQa-e38K7_bqRm1Jyu1-aHzf9ihesXkk', '22.jpg', '2018-11-18'),
-(144, 'NvPg8w-2yATKP3nL93WSyqJ2XteKYf', 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGh', 'KXS35gMP8Ms4iBYRNsFsYGiG2SYsF5', 'g6vkmvdlgeIrKq7SlwRKl7NjSSER7Ss4cKvPG9IikRs', '', '2018-11-18');
+(10, 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'g0RhkLm3JqtY87nglHZspVian7qQj_cckdZwAUl6y8o', 'SBfI6m5IkN1k2wpEh27zJbiYAdywUJMQeEEJPzZ5CTc', '', '2018-11-19'),
+(11, 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'g0RhkLm3JqtY87nglHZspVian7qQj_cckdZwAUl6y8o', 'SBfI6m5IkN1k2wpEh27zJbiYAdywUJMQeEEJPzZ5CTc', '', '2018-11-19'),
+(7, 'LCmXtIU4pFTgXTQRlgu66SLx0h3dty3eB4TdWiY3A6E', 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'lGzYcJmfLanuygC7Cyks5Bh5zVlPeJWFIx2ZSUT2NCk', '-4rd2is2iH3OuF4xhgb-6tJEaA8LEBtxDEmL8hsELwFFlkzXjZiluvGPGHV7QrVpRMtEH_mZsImYJnQIYDgcUg', 'NP_Complete.pdf', '2018-11-19'),
+(8, 'NvPg8w-2yATKP3nL93WSyqJ2XteKYfJEukS5RXmagfw', 'lgHc978Bqdnpb8Ralbc-cm_NIyfjGhjbk4EHU3zY0QQ', 'VygSObvCBSiq8helnuotYt_fcZmK8Eg5NX-wI3n9TpI', 'wx4iPM5SHcGwmTSEVo5Xh90IypOAYMMf1NPTXv9EiIY', '', '2018-11-19');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
