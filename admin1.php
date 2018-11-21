@@ -10,6 +10,8 @@
 <div class="container1">	
 
 <?php include("connection.php");
+include_once('library/enAde.php');
+$converter = new Encryption;
 error_reporting(0);
 
 
@@ -41,9 +43,10 @@ $sql="select * from userinfo where vstatus=0";
 $r=mysql_query($sql);
 while($n=mysql_fetch_array($r))
 {
+	$n[1] = $converter->decode($n[1]);
  echo"<table><tr align='top';>       
                   <td width='100'>$n[0]</td>
-				  <td>$n[1]</td>
+				  <td width='300'>$n[1]</td>
 				  <td><a href='admin1.php?u=1&e=$n[0]'/><button>Approve</button></a></td>
 				  </tr></table>";
 

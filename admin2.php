@@ -8,10 +8,12 @@
 </head>
 
 <body>
-<table height="60"></table>
+<div class="container1">
 
-<table width="1430"  style="background-color:rgba(255,255,255,0.5);">
+
 <?php include("connection.php");
+include_once('library/enAde.php');
+$converter = new Encryption;
 error_reporting(0);
 
 
@@ -58,11 +60,12 @@ $sql="select * from userinfo where vstatus=1";
 $r=mysql_query($sql);
 while($n=mysql_fetch_array($r))
 {
- echo"<tr font_family='verdana'>        
-                  <td>$n[0]</td>
-				  <td>$n[1]</td>
-				  <td><a href='admin2.php?u=1&e=$n[0]'><img src='newimage/22.png' height='30' width='50'></a></td>
-				  <td><a href='admin2.php?u=2&e=$n[0]'><img src='newimage/23.png' height='30' width='50'></a></td>
+		$n[1] = $converter->decode($n[1]);
+ echo"<table><tr font_family='verdana'>        
+                  <td width='100'>$n[0]</td>
+				  <td width='300'>$n[1]</td>
+				  <td><a href='admin2.php?u=1&e=$n[0]'><button>Suspend</button></a></td>
+				  <td><a href='admin2.php?u=2&e=$n[0]'><button>Dismiss</button></a></td>
 				  </tr>";
 
 
@@ -71,6 +74,6 @@ while($n=mysql_fetch_array($r))
 ?></table>>
   
   
-  
+ </div>
 </body>
 </html>
