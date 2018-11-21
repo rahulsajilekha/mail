@@ -20,11 +20,11 @@ if($_POST['reg'])
 {
 	if($_POST['un']=="" || $_POST['pwd']=="")
 	{
-	$err="fill your user name first";
+	$err="Empty field found";
 	}
 	else
 	{
-	$r=mysql_query("SELECT * FROM userinfo where user_name='{$_POST['un']}'");
+	$r=mysql_query("SELECT * FROM userinfo where user_name='$un'");
 	$t=mysql_num_rows($r);
 		if($t==1)
 		{
