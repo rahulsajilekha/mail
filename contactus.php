@@ -48,10 +48,10 @@ error_reporting(1);
     <tr>
       <td>
 <div class="card" >
-  <img src="sundar.jpg" alt="John" style="width:50%">
-  <h1>Sundar Pichai</h1>
-  <p class="title">CEO & Founder</p>
-  <p>Harvard University</p>
+  <img src="LCA.jpg" alt="John" style="width:100px">
+  <h1>Mr.VINOD</h1>
+  <p class="title">Senior Manager</p>
+  <p>Infosys</p>
   <p>Email : mailserver@gmail.com</p> 
 </div>
 </td>
@@ -63,10 +63,10 @@ error_reporting(1);
   </td>
 <td>
 <div class="card" >
-  <img src="markzuc.jpg" alt="Mark" style="width:70%">
-  <h1>Mark Zuck</h1>
-  <p class="title">Manager</p>
-  <p>Oxford University</p>
+  <img src="mangum.jpg" alt="Mark" style="width:100px">
+  <h1>Mrs.SREEJA</h1>
+  <p class="title">HR Manager</p>
+  <p>Infosys</p>
   <p>Email : mailservermanager@gmail.com</p>
   <p>MOB : 8887776664</p>
  </div>
@@ -79,10 +79,10 @@ error_reporting(1);
   </td>
 <td>
 <div class="card" >
-  <img src="Stevejo.jpg" alt="Steve" style="width:40%">
-  <h1>Steve Jo</h1>
+  <img src="Pro.jpg" alt="Steve" style="width:100px">
+  <h1>Mr.VASUDEV</h1>
   <p class="title">Assistant Manager</p>
-  <p>Kerala University</p>
+  <p>Infosys</p>
   <p>Email : mailserverasstm@gmail.com</p>
   <p>MOB : 8887776663</p>
   </td>

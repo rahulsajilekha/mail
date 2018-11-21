@@ -1,10 +1,12 @@
-#main
+
+
+
 
 
 		input[type=reset],input[type=submit]{
 			padding: 10px;
 		}
-		input[type=text],input[type=password],input[type=number],input[type=email],
+		input[type=text],input[type=password],input[type=number],input[type=email]
 			{ 
                         display: block;
 			width:250px;
