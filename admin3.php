@@ -3,13 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
+<link rel="stylesheet" href="style5.css" />
 </head>
 
 <body>
-<table height="60"></table>
-
-<table width="1430"  style="background-color:rgba(255,255,255,0.5);">
+<div class="container1">
 <?php include("connection.php");
+include_once('library/enAde.php');
+$converter = new Encryption;
 error_reporting(0);
 
 
@@ -41,10 +42,11 @@ $sql="select * from userinfo where vstatus=2";
 $r=mysql_query($sql);
 while($n=mysql_fetch_array($r))
 {
- echo"<tr align='top' font_family='verdana' >       
-                  <td>$n[0]</td>
-				  <td>$n[1]</td>
-				  <td><a href='admin3.php?u=1&e=$n[0]'><img src='newimage/21.png' height='30' width='50'></td >
+	$n[1] = $converter->decode($n[1]);
+ echo"<table><tr align='top' font_family='verdana' >       
+                  <td width='100'>$n[0]</td>
+				  <td width='300'>$n[1]</td>
+				  <td><a href='admin3.php?u=1&e=$n[0]'><button>Revoke</button></a></td >
 				  </tr>";
 
 
@@ -55,6 +57,6 @@ while($n=mysql_fetch_array($r))
 
 
 
-
+</div>
 </body>
 </html>

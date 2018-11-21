@@ -24,7 +24,7 @@ if($_POST['reg'])
 	}
 	else
 	{
-	$r=mysql_query("SELECT * FROM userinfo where user_name='{$_POST['un']}'");
+	$r=mysql_query("SELECT * FROM userinfo where user_name='$un'");
 	$t=mysql_num_rows($r);
 		if($t==1)
 		{

@@ -70,6 +70,19 @@ if(isset($_POST['signIn']))
 	//$fid=$row->user_name;
 		//$fpass=$row->password;
 	$fstatus=$row->cstatus;
+	if(!$fid) {
+			echo "Account not found";
+	}
+
+  else{
+
+            if($fstatus==0)
+		      {
+		        echo "Account not approved";
+		       }
+
+       
+
 		if($fstatus==1)
 		{
 		if($fid==$_POST['id'] && $fpass==$_POST['pwd'])
@@ -78,21 +91,18 @@ if(isset($_POST['signIn']))
 		//header('location:HomePage.php');
 		echo "<script>window.location='HomePage.php'</script>";
 		}
-		elseif ($fid!=$_POST['id'] || $fpass!=$_POST['pwd'])
+		elseif($fid!=$_POST['id'] || $fpass!=$_POST['pwd'])
 		{
-			echo "invalid username/password";
+			echo " Invalid Password";
 			//$err="invalid id or pass";
-			//cript>alert("Invalid Username/Password");</script>
+			//<script>alert("Invalid Username/Password");</script>
 		
 		}
-	}
-		else
-		{
-		  $err="Account not approved";
-		  }
+
 		
-		
+	}	
 	}
+}		
 }
 ?>
 <form method="post" action="">
