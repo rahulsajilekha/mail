@@ -16,7 +16,7 @@ border-radius: 25px;
 .bu{
 border-radius: 25px;
 border-color: red;
-background-color: black;
+background-color: rgba(150,150,150,0.5);;
 color: white; 
 }
 </style>
