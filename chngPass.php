@@ -1,3 +1,28 @@
+
+<html>
+<head><link rel="stylesheet" href="style.css" />
+
+<style>
+.dt{
+background-color:rgba(51,51,51,0.5);
+width: 100%;
+height: 100%;
+padding: 10px;
+border-radius: 25px;	
+}
+.bu{
+border-radius: 25px;
+border-color: red;
+background-color: black;
+color: white;	
+}
+table{
+border-radius: 25px;	
+}
+</style>
+</head>
+
+
 <?php
 include_once('connection.php');
 include_once('library/enAde.php');
@@ -52,6 +77,7 @@ if(isset($_POST['chngP']))
 }
 ?>
 <body>
+	<div class="dt">
 <form method="post">
 <table   height="200" ></table>
 <table width="600"  style="background-color:rgba(150,150,150,0.5);font-family:Verdana">
@@ -75,10 +101,12 @@ if(isset($_POST['chngP']))
   <tr height="40"></tr>
 <tr>
     <td colspan="2" align="center">
-	<input type="submit" name="chngP" value="Change Password"/></td>
+	<input type="submit" name="chngP" class="bu" value="Change Password"/></td>
   </tr><tr height="50"></tr>
   
 </table>
 
 </form>
+</div>
 </body>
+</html>
