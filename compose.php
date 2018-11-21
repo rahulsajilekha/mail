@@ -53,19 +53,44 @@ if(@$_REQUEST['save'])
 
 	
 ?>
-<head>
+<head><link rel="stylesheet" href="style.css" />
 	<style>
 	input[type=text]
 	{
 	width:200px;
 	height:35px;
 	}
+.dt{
+background-color:rgba(51,51,51,0.5);
+width: 120%;
+height: 100%;
+padding: 10px;
+border-radius: 25px;  
+}
+table{
+border-radius: 25px;  
+padding: 10px;
+}
+.bu{
+border-radius: 25px;
+border-color: red;
+background-color: black;
+color: white; 
+}
+.di{ margin: 8px 0;
+                        box-sizing: border-box;
+                        border: none;
+                        border: 2px solid #80ccff;
+                        background-color: rgba(255,255,255,0.1);
+                        border-radius: 25px;}
+
 	</style>
 </head>
 <body>
+<div class="dt">
 <form method="post" enctype="multipart/form-data">
-<table width="1200" height="80"></table>
-<table width="1200" style="background-color:rgba(150,150,150,0.5);" >
+<table width="1100" height="80"></table>
+<table width="1100" style="background-color:rgba(150,150,150,0.5);" >
   <?php echo @$err; ?>
   <tr height="30"></tr>
   <tr>
@@ -83,20 +108,20 @@ if(@$_REQUEST['save'])
   </tr>
   <tr>
     <th height="36" scope="row">upload your file</th>
-    <td><input type="file" name="file1" id="file"/></td>
+    <td><input type="file" class="bu" name="file1" id="file"/></td>
   </tr>
   <tr>
     <th height="52" scope="row">Msg</th>
-    <td><textarea rows="8" cols="40" name="msg"></textarea></td>
+    <td><textarea rows="8" class="di" cols="40" name="msg"></textarea></td>
   </tr>
   <tr>
     <th height="35" colspan="2" scope="row">
-	<input type="submit" name="send" value="Send"/>
-	<input type="submit" name="save" value="Save"/>
-	<input type="reset" value="Cancel"/>	</th>
+	<input type="submit" class="bu" name="send" value="Send"/>
+	<input type="submit" class="bu" name="save" value="Save"/>
+	<input type="reset" class="bu" value="Cancel"/>	</th>
   </tr>
 </table>
-
+</div>
 </body>
 </form>
 </html>
