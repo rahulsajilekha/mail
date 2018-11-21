@@ -9,13 +9,13 @@ a{
 .delete{
   background-color: #333;
     color: white;
-    border: 3px solid #ff0000;
+    border: 3px solid green;
   border-radius: 20px;
   height: 35px;
   width: 90px;
 }
 .delete:hover {
-  border: 3px solid green;
+  border: 3px solid #ff0000;
 }
 .f31{
   background-color: #333;
@@ -25,6 +25,7 @@ a{
   height: 580px;
 
 }
+
 </style>
 </head>
 <body>
@@ -62,10 +63,10 @@ for ($i=0; $i < 1000; $i++) {
         $e = $converter->decode($e);
        
        echo "<tr height='50' colspan='4' style='background-color:rgba(150,150,150,0.5);'>";
-	   echo "<td width='100'><input type='checkbox' name='ch[]' value='$a'/></td>";
-       echo "<td width='300'>".$c."</td>";
-	   echo "<td width='400'><a href='adminhome.php?coninb=$a&chk=$y'>".$e."</a></td>";
-	   echo "<td width='100'>".$h."</td>";
+	   echo "<td width='80'><input type='checkbox' name='ch[]' value='$a'/></td>";
+       echo "<td width='200'>".$c."</td>";
+	   echo "<td width='250'><a href='adminhome.php?coninb=$a&chk=$y'>".$e."</a></td>";
+	   echo "<td width='80'>".$h."</td>";
 	   echo "</tr>";
 	}
 	}

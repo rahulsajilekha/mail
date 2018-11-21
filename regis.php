@@ -68,7 +68,7 @@
   opacity: 0;
 }
 
-
+td{color: white;}
 
 
 

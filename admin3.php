@@ -4,10 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
 <link rel="stylesheet" href="style5.css" />
+<style>
+.f31{
+  background-color: #333;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  height: 580px;
+
+}
+
+</style>
+
 </head>
 
 <body>
 <div class="container1">
+	<div class="f31">
 <?php include("connection.php");
 include_once('library/enAde.php');
 $converter = new Encryption;
@@ -43,7 +56,7 @@ $r=mysql_query($sql);
 while($n=mysql_fetch_array($r))
 {
 	$n[1] = $converter->decode($n[1]);
- echo"<table><tr align='top' font_family='verdana' >       
+ echo"<table><tr align='top' font_family='verdana' style='background-color:rgba(150,150,150,0.5);'>       
                   <td width='100'>$n[0]</td>
 				  <td width='300'>$n[1]</td>
 				  <td><a href='admin3.php?u=1&e=$n[0]'><button>Revoke</button></a></td >
@@ -56,7 +69,7 @@ while($n=mysql_fetch_array($r))
 
 
 
-
+</div>
 </div>
 </body>
 </html>

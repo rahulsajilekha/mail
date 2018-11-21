@@ -14,109 +14,16 @@ $id=$_SESSION['sid'];
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>My mail server</title>
 <style>
-	
-	* {
-    box-sizing: border-box;
-}
+	a{text-decoration: none}
+	a:hover{ background-color:#fcff26}
+	#atop{margin-left:50}
+	img{
+		vertical-align: middle;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        }
 
-body {
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Style the top navigation bar */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    height: 60px;
-    border: 25px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 24px grey;
-    
-}
-
-/* Style the topnav links */
-.topnav a {
-    float: left;
-    display: block;
-    color:  #f2f2f2;
-    text-align: center;
-    font-size: 14px;
-    font-family: verdana;
-    font-style: bold;
-    padding: 20px;
-    text-decoration: none;
-
-}
-.sidenav {
-    overflow: hidden;
-    background-color:rgba(51,51,51,0.5);
-    width:100%;
-    border: 25px;
-    height: 700px;
-    padding-top: 40px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 24px grey;
-}
-.sidenav a {
-    float: left;
-    display: block;
-    color:   white;
-    text-align: center;
-    font-size: 14px;
-    font-family: verdana;
-    font-style: bold;
-    padding: 40px;
-    text-decoration: none;
-}
-/* Change color on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-
-}
-.sidenav a:hover {
-    font-size: 18px;
-
-}
-.column {
-    float: left;
-    width: 10%;
-    padding: 2px;
-    height: 700px;
-    border-radius: 20px;
-
-   
-}
-.column1 {
-    float: left;
-    width: 75%;
-    padding-left: 10px;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    height: 700px;
-   
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    padding: 10px
-}
-img{
-    border-radius: 50%;
-height:60px;
-width:60px;
-
-float: right;
-}
 </style>
 </head>
 
@@ -127,7 +34,7 @@ include('ads/header.php');?>
 
 <body>
 
-<table width="100%" align="center" style="background-image:url('theme/<?php
+<table width="1430" align="center" style="background-image:url('theme/<?php
 		@$conTheme=$_REQUEST['conTheme'];
 		//echo $conTheme;
 		if($conTheme)
@@ -143,13 +50,8 @@ include('ads/header.php');?>
 			?>');">
   
   <tr>
-    <td >
-	<div class="topnav">
-	<a href="HomePage.php?chk=chngthm">THEME</a>
-    <a href="HomePage.php?chk=chngPass"">PASSWORD EDIT</a>
-    <a href="HomePage.php?chk=vprofile">EDIT PROFILE</a>
-    <a href="HomePage.php?chk=updnews">POST NEWS</a>
-    <a href="HomePage.php?chk=logout">LOGOUT</a>	
+    <td height="175" colspan="3" align="center" style="background-image:url(newimage/box.png);">
+	<div  style="float:left;margin-left:30px;">
 	<?php
 	include_once('connection.php');
 	error_reporting(1);
@@ -167,22 +69,39 @@ include('ads/header.php');?>
 	//$id=$row->user_name;
 	//echo $file;
 	echo "<img alt='image not upload' src='userImages/$id/$file' height='160' width='140' border='3'/>";
-?>
+?></div>
+	
+	 <div style=" font-family:Verdana;float:left;margin-left:300px;padding-top:40px;font-size:70px;text-align:center;color:#333333"> 
 <?php $converter = new Encryption; ?>
 	 	Welcome <?php  echo $converter->decode($_SESSION['sid']); ?> 
 	 </div>
- 	<div class="row" align="center" >
-    <div class="column" >
-    <div class="sidenav">
-    <a href="HomePage.php?chk=compose">COMPOSE</a>
-	<a href="HomePage.php?chk=inbox">INBOX</a>
-    <a href="HomePage.php?chk=sent"">SENT</a>
-    <a href="HomePage.php?chk=trash">TRASH</a>
-    <a href="HomePage.php?chk=draft">DRAFTS</a>
+ 	  </td>
+  </tr>
+  <tr>
+
+         
+        <td height="70" colspan="3" style="background-color:rgba(153,153,255,0.5);">
+		<a style="margin-left:50px"  href="HomePage.php?chk=chngthm"><img  src="newimage/ct.png" height="75" width="200"></a>
+		<a style="margin-left:50px"  href="HomePage.php?chk=chngPass"><img  src="newimage/cp.png" height="75" width="200"></a>
+		
+		<a style="margin-left:50px" href="HomePage.php?chk=vprofile"><img  src="newimage/ep.png" height="75" width="200"></a>
+		
+		<a style="margin-left:50px" href="HomePage.php?chk=updnews"><img  src="newimage/un.png" height="75" width="200"></a>
+		<a style="margin-left:50px" href="HomePage.php?chk=logout"><img  src="newimage/lo.png" height="75" width="200"></a></td>
+  
+  </tr>
+  <tr>
+    <td width="158" height="550" valign="top" align="center" style="background-color:rgba(250,250,250,0.5);">
+	<div style="margin-top:50px"><a href="HomePage.php?chk=compose"><img src="newimage/2.png" height="60" width="130"/></a><br/><br/>
+	<a href="HomePage.php?chk=inbox"><img src="newimage/1.png" height="60" width="130"/></a><br/><br/>
+	<a href="HomePage.php?chk=sent"><img src="newimage/3.png" height="60" width="130"/></a><br/><br/>
+	<a href="HomePage.php?chk=trash"><img src="newimage/4.png" height="60" width="130"/></a><br/><br/>
+	<a href="HomePage.php?chk=draft"><img src="newimage/5.png" height="60" width="130"/></a>
 	
 	</div>
-	</div>
-	<div class="column1" >	
+	</td>
+    <td width="795" height="550" valign="top" align="center" style="background-color:rgba(240,240,240,0.5);">
+	<div style="width:795; height:550">		
 			
 		<?php
 		@$id=$_SESSION['sid'];

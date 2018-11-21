@@ -16,7 +16,14 @@
 	}
 	.a2{
 		
-		padding: 25px;
+		height: 650px;
+	width: 100%;
+	border: none;
+	padding: 60px;
+	background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+	 border-radius: 15px;
+	 box-shadow: 2px 2px 8px grey;
+
 	}
 	
 	table.ep{
