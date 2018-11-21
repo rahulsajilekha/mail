@@ -70,6 +70,7 @@ border-radius: 25px;
 table{
 border-radius: 25px;  
 padding: 10px;
+color: white; 
 }
 .bu{
 border-radius: 25px;

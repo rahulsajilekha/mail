@@ -12,7 +12,8 @@ padding: 10px;
 border-radius: 25px;  
 }
 table{
-border-radius: 25px;  
+border-radius: 25px; 
+color: white;  
 }
 .bu{
 border-radius: 25px;
