@@ -10,7 +10,8 @@ error_reporting(1);
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    background-color: white;
+    width: 300px;
     height: 400px;
     margin: auto;
     text-align: center;
@@ -28,9 +29,10 @@ error_reporting(1);
 
 .pa {
    
-     background: white;
+   background-color: #333;
    padding: 100px;
-   padding-left: 50px;
+   padding-bottom: : 50px;
+   padding-left: 25px;
    padding-right: 50px;
    height: 100%;
    box-shadow: 0px 2px 4px grey;
