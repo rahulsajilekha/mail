@@ -100,7 +100,7 @@ if($_POST['reg'])
 {
 	if($_POST['un']=="" || $_POST['pwd']=="")
 	{
-	$err="fill your user name first";
+	$err="Empty field found";
 	}
 	else
 	{

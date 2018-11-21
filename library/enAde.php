@@ -1,5 +1,5 @@
 <?php class Encryption {
-    var $skey = "yourSecretKey"; // you can change it
+    var $skey = "yourSecretKey"; 
 
     public  function safe_b64encode($string) {
         $data = base64_encode($string);

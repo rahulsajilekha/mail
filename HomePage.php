@@ -44,7 +44,9 @@ include('ads/header.php');?>
 		}
 			@$f=fopen("userImages/$id/theme","r");
 			@$fr=fread($f, filesize("userImages/$id/theme"));
+			
 			echo $fr;
+
 			?>');">
   
   <tr>
